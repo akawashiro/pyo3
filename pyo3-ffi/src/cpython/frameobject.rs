@@ -48,7 +48,7 @@ pub struct PyFrameObject {
     #[cfg(Py_3_10)]
     pub f_state: PyFrameState,
     pub f_blockstack: [PyTryBlock; crate::CO_MAXBLOCKS],
-    pub f_localsplus: [*mut PyObject; 1],
+    pub f_localsplus: [*mut PyObject; 1000],
 }
 
 #[cfg(any(PyPy, Py_3_11))]
